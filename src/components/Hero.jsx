@@ -55,7 +55,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-r from-navy-blue to-blue-900 flex items-center">
+    <section className="relative min-h-[70vh] bg-gradient-to-r from-navy-blue to-blue-900 flex items-center">
       <div className="absolute inset-0 bg-black opacity-50"></div>
       
       <div className="relative z-10 container mx-auto px-6 py-20">

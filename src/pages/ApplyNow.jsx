@@ -154,7 +154,7 @@ export default function ApplyNow() {
       <Header />
 
       {/* Hero Banner */}
-      <section className="relative min-h-screen bg-gradient-to-r from-navy-blue to-blue-900 flex items-center">
+      <section className="relative min-h-[60vh] bg-gradient-to-r from-navy-blue to-blue-900 flex items-center">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div
           className="absolute inset-0 bg-cover bg-center gradient-overlay"

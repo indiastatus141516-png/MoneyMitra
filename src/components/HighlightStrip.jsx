@@ -1,12 +1,13 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const HighlightStrip = () => {
   const navigate = useNavigate();
-  const scrollText = "🚀 FAST APPROVAL • 💰 UP TO $5000 • ⚡ INSTANT TRANSFER • 🛡️ SECURE & ENCRYPTED • 📱 MOBILE FRIENDLY • 🎯 NO CREDIT CHECK • 🚀 FAST APPROVAL • 💰 UP TO $5000 • ⚡ INSTANT TRANSFER • 🛡️ SECURE & ENCRYPTED • 📱 MOBILE FRIENDLY • 🎯 NO CREDIT CHECK";
+  const scrollText =
+    "🚀 FAST APPROVAL • 💰 UP TO $5000 • ⚡ INSTANT TRANSFER • 🛡️ SECURE & ENCRYPTED • 📱 MOBILE FRIENDLY • 🎯 NO CREDIT CHECK • 🚀 FAST APPROVAL • 💰 UP TO $5000 • ⚡ INSTANT TRANSFER • 🛡️ SECURE & ENCRYPTED • 📱 MOBILE FRIENDLY • 🎯 NO CREDIT CHECK";
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Enhanced Animated Background with Mesh Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-blue-500/10"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(120,119,198,0.15),transparent_50%)]"></div>
@@ -62,7 +63,10 @@ const HighlightStrip = () => {
 
           {/* Subtitle with enhanced styling */}
           <p className="text-2xl md:text-3xl text-white mt-6 max-w-4xl mx-auto font-bold leading-tight">
-            Your trusted partner for <span className="text-yellow-400 animate-pulse">fast</span> and <span className="text-cyan-400 animate-pulse">reliable</span> financial solutions
+            Your trusted partner for{" "}
+            <span className="text-yellow-400 animate-pulse">fast</span> and{" "}
+            <span className="text-cyan-400 animate-pulse">reliable</span>{" "}
+            financial solutions
           </p>
         </div>
 
@@ -80,17 +84,32 @@ const HighlightStrip = () => {
           {/* Secondary scrolling layer */}
           <div className="whitespace-nowrap animate-marquee-reverse mt-2 opacity-60">
             <span className="text-lg font-medium text-white/80">
-              💎 TRUSTED BY MILLIONS • 🔒 BANK-LEVEL SECURITY • ⚡ LIGHTNING FAST • 🎯 PRECISION ACCURACY • 💎 TRUSTED BY MILLIONS • 🔒 BANK-LEVEL SECURITY • ⚡ LIGHTNING FAST • 🎯 PRECISION ACCURACY
+              💎 TRUSTED BY MILLIONS • 🔒 BANK-LEVEL SECURITY • ⚡ LIGHTNING
+              FAST • 🎯 PRECISION ACCURACY • 💎 TRUSTED BY MILLIONS • 🔒
+              BANK-LEVEL SECURITY • ⚡ LIGHTNING FAST • 🎯 PRECISION ACCURACY
             </span>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="mt-12">
-          <button onClick={() => navigate('/apply-now')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-900 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 font-bold text-lg shadow-2xl hover:shadow-yellow-500/25 flex items-center space-x-2 mx-auto group">
+          <button
+            onClick={() => navigate("/apply-now")}
+            className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-900 rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 font-bold text-lg shadow-2xl hover:shadow-yellow-500/25 flex items-center space-x-2 mx-auto group"
+          >
             <span>Get Started Today</span>
-            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            <svg
+              className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
             </svg>
           </button>
         </div>
@@ -98,12 +117,20 @@ const HighlightStrip = () => {
 
       <style jsx>{`
         @keyframes marquee {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
         }
         @keyframes marquee-reverse {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
         }
         .animate-marquee {
           animation: marquee 25s linear infinite;

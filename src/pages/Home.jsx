@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import Steps from '../components/Steps';
 import Eligibility from '../components/Eligibility';
 import Features from '../components/Features';
-import LoanCalculator from '../components/LoanCalculator';
+// import LoanCalculator from '../components/LoanCalculator';
 import Stats from '../components/Stats';
 import Blog from '../components/Blog';
 import Testimonials from '../components/Testimonials';
@@ -134,7 +134,7 @@ const Home = () => {
       <Steps />
       <Eligibility />
       <Features />
-      <LoanCalculator />
+      {/* <LoanCalculator /> */}
       <Stats />
       <Blog articles={articles} />
       <Testimonials />

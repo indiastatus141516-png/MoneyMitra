@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +16,7 @@ const Testimonials = () => {
       avatar: "SJ",
       gradient: "from-emerald-500 to-teal-600",
       verified: true,
-      location: "Austin, TX"
+      location: "Austin, TX",
     },
     {
       name: "Michael Chen",
@@ -26,7 +26,7 @@ const Testimonials = () => {
       avatar: "MC",
       gradient: "from-blue-500 to-indigo-600",
       verified: true,
-      location: "San Francisco, CA"
+      location: "San Francisco, CA",
     },
     {
       name: "Emily Rodriguez",
@@ -36,8 +36,8 @@ const Testimonials = () => {
       avatar: "ER",
       gradient: "from-purple-500 to-pink-600",
       verified: true,
-      location: "Miami, FL"
-    }
+      location: "Miami, FL",
+    },
   ];
 
   // Auto-scroll functionality
@@ -56,7 +56,10 @@ const Testimonials = () => {
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + testimonials.length) % testimonials.length,
+    );
   };
 
   const goToTestimonial = (index) => {
@@ -85,7 +88,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+    <section className="py-8 md:py-12 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-indigo-200/30 to-purple-200/30 rounded-full blur-3xl animate-pulse"></div>
@@ -108,15 +111,26 @@ const Testimonials = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full mb-6 shadow-xl">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            <svg
+              className="w-8 h-8 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              />
             </svg>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-indigo-800 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
             What Our Customers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Real stories from real customers who trust us with their financial needs. Join thousands of satisfied borrowers who chose PayLoan.
+            Real stories from real customers who trust us with their financial
+            needs. Join thousands of satisfied borrowers who chose PayLoan.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto mt-8"></div>
         </div>
@@ -132,8 +146,8 @@ const Testimonials = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-2xl border border-white/50 relative overflow-hidden"
                 style={{
-                  transformStyle: 'preserve-3d',
-                  perspective: '1000px'
+                  transformStyle: "preserve-3d",
+                  perspective: "1000px",
                 }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
@@ -155,18 +169,24 @@ const Testimonials = () => {
                     transition={{ delay: 0.1 }}
                   >
                     <div className="flex items-center space-x-1 bg-yellow-50 px-4 py-2 rounded-full border border-yellow-200">
-                      {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                        <motion.svg
-                          key={i}
-                          className="w-5 h-5 text-yellow-500 fill-current"
-                          viewBox="0 0 24 24"
-                          initial={{ opacity: 0, scale: 0, rotate: -180 }}
-                          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                          transition={{ delay: 0.2 + i * 0.1, type: "spring", stiffness: 300 }}
-                        >
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </motion.svg>
-                      ))}
+                      {[...Array(testimonials[currentIndex].rating)].map(
+                        (_, i) => (
+                          <motion.svg
+                            key={i}
+                            className="w-5 h-5 text-yellow-500 fill-current"
+                            viewBox="0 0 24 24"
+                            initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                            transition={{
+                              delay: 0.2 + i * 0.1,
+                              type: "spring",
+                              stiffness: 300,
+                            }}
+                          >
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                          </motion.svg>
+                        ),
+                      )}
                       <span className="ml-2 text-yellow-700 font-semibold text-sm">
                         {testimonials[currentIndex].rating}.0
                       </span>
@@ -176,8 +196,12 @@ const Testimonials = () => {
                   {/* Quote Icon */}
                   <div className="flex justify-center mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
                       </svg>
                     </div>
                   </div>
@@ -199,14 +223,20 @@ const Testimonials = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                   >
-                    <div className={`w-16 h-16 bg-gradient-to-br ${testimonials[currentIndex].gradient} rounded-2xl flex items-center justify-center mb-4 shadow-xl relative overflow-hidden`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-br ${testimonials[currentIndex].gradient} rounded-2xl flex items-center justify-center mb-4 shadow-xl relative overflow-hidden`}
+                    >
                       <span className="text-white font-bold text-xl">
                         {testimonials[currentIndex].avatar}
                       </span>
                       {testimonials[currentIndex].verified && (
                         <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center border-2 border-white">
-                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          <svg
+                            className="w-3 h-3 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </div>
                       )}
@@ -220,8 +250,12 @@ const Testimonials = () => {
                           {testimonials[currentIndex].name}
                         </div>
                         {testimonials[currentIndex].verified && (
-                          <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          <svg
+                            className="w-5 h-5 text-blue-500"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         )}
                       </div>
@@ -236,8 +270,12 @@ const Testimonials = () => {
                 </div>
 
                 {/* Decorative Elements */}
-                <div className="absolute top-4 right-4 text-indigo-200 text-6xl font-serif leading-none">"</div>
-                <div className="absolute bottom-4 left-4 text-indigo-200 text-6xl font-serif leading-none rotate-180">"</div>
+                <div className="absolute top-4 right-4 text-indigo-200 text-6xl font-serif leading-none">
+                  "
+                </div>
+                <div className="absolute bottom-4 left-4 text-indigo-200 text-6xl font-serif leading-none rotate-180">
+                  "
+                </div>
               </motion.div>
             </AnimatePresence>
 
@@ -248,8 +286,18 @@ const Testimonials = () => {
               whileHover={{ x: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <svg
+                className="w-6 h-6 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </motion.button>
             <motion.button
@@ -258,8 +306,18 @@ const Testimonials = () => {
               whileHover={{ x: 2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-6 h-6 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </motion.button>
           </div>
@@ -272,8 +330,8 @@ const Testimonials = () => {
                 onClick={() => goToTestimonial(index)}
                 className={`relative rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? 'w-12 h-3 bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg'
-                    : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
+                    ? "w-12 h-3 bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg"
+                    : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
                 }`}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
@@ -296,7 +354,9 @@ const Testimonials = () => {
               <motion.div
                 className="h-full bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"
                 initial={{ width: "0%" }}
-                animate={{ width: `${((currentIndex + 1) / testimonials.length) * 100}%` }}
+                animate={{
+                  width: `${((currentIndex + 1) / testimonials.length) * 100}%`,
+                }}
                 transition={{ duration: 0.5 }}
               />
             </div>
@@ -309,10 +369,22 @@ const Testimonials = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/50">
-            <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            <svg
+              className="w-5 h-5 text-indigo-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              />
             </svg>
-            <span className="text-gray-700 font-medium">Trusted by thousands of customers</span>
+            <span className="text-gray-700 font-medium">
+              Trusted by thousands of customers
+            </span>
           </div>
         </div>
       </div>
