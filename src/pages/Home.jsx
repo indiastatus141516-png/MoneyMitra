@@ -134,7 +134,7 @@ const Home = () => {
       <Steps />
       <Eligibility />
       <Features />
-      <LoanCalculator />
+      {/* <LoanCalculator /> */}
       <Stats />
       <Blog articles={articles} />
       <Testimonials />
