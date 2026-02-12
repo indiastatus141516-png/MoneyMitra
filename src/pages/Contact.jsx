@@ -167,11 +167,12 @@ const Contact = () => {
 
                 <div className="flex items-start">
                   <svg className="w-6 h-6 text-indigo-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    <path d="M2.94 6.34A2 2 0 014.66 5h10.68a2 2 0 011.72 1.34L10 11 2.94 6.34z" />
+                    <path d="M18 8.12V14a2 2 0 01-2 2H4a2 2 0 01-2-2V8.12l7.45 4.26a1 1 0 001.1 0L18 8.12z" />
                   </svg>
                   <div>
-                    <p className="font-semibold text-gray-900">Phone</p>
-                    <p className="text-gray-600">(555) 123-LOAN<br />(555) 123-5626</p>
+                    <p className="font-semibold text-gray-900">Email</p>
+                    <p className="text-gray-600">info@cashzenusa.com</p>
                   </div>
                 </div>
 
@@ -204,13 +205,13 @@ const Contact = () => {
             {/* Quick Contact */}
             <div className="bg-indigo-600 text-white p-8 rounded-lg">
               <h3 className="text-xl font-poppins font-bold mb-4">Need Immediate Help?</h3>
-              <p className="mb-6">Call our support line for instant assistance with your loan questions.</p>
+              <p className="mb-6">Email our support team for quick assistance with your loan questions.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:+15551235626"
+                  href="mailto:info@cashzenusa.com"
                   className="flex-1 px-4 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center"
                 >
-                  Call Now
+                  Email Now
                 </a>
                 <button
                   onClick={handleChatToggle}
