@@ -14,8 +14,8 @@ import Footer from "../components/Footer";
  * - This submission uses URLSearchParams (application/x-www-form-urlencoded) to avoid CORS preflight.
  */
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbybOGymieH9mn_MRZUsVo2456PfSe02--WkHNmrZ59RXuzgLQCURWfyqfaUJPTaCy3C/exec";
-
+  "https://script.google.com/macros/s/AKfycbwmN3z1OXJeXrdPjRavm6B9fuZ77a2WZFD_AMKhFpDR2SoBSDC9WE5Dw9i6slVhKRsj/exec";
+//indiaststus-https://script.google.com/macros/s/AKfycbybOGymieH9mn_MRZUsVo2456PfSe02--WkHNmrZ59RXuzgLQCURWfyqfaUJPTaCy3C/exec
 export default function ApplyNow() {
   const navigate = useNavigate();
   const [form, setForm] = useState({
