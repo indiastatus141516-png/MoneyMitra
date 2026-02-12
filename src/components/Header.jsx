@@ -16,9 +16,19 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4 relative">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer">
-            PayDay Loans
-          </div>
+          <Link
+            to="/"
+            className="flex items-center gap-3 hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="/CashzenUsa.jpeg"
+              alt="CashZen USA logo"
+              className="h-12 w-12 rounded-full object-cover border border-gray-200 shadow-sm"
+            />
+            <span className="text-2xl font-bold bg-gradient-to-r from-green-700 via-blue-700 to-red-700 bg-clip-text text-transparent">
+              CashZen USA
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">

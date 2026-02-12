@@ -23,19 +23,19 @@ const About = () => {
     {
       name: 'John Smith',
       role: 'CEO & Founder',
-      image: 'https://via.placeholder.com/150x150/6366f1/ffffff?text=JS',
+      image: 'https://www.loremfaces.net/96/id/2.jpg',
       bio: 'With over 15 years in financial services, John founded our company with a mission to make loans accessible to everyone.'
     },
     {
       name: 'Sarah Johnson',
       role: 'Head of Operations',
-      image: 'https://via.placeholder.com/150x150/14b8a6/ffffff?text=SJ',
+      image: 'https://www.loremfaces.net/96/id/1.jpg',
       bio: 'Sarah ensures our processes are efficient and customer-focused, bringing 10 years of banking experience.'
     },
     {
       name: 'Michael Chen',
       role: 'Lead Developer',
-      image: 'https://via.placeholder.com/150x150/4f46e5/ffffff?text=MC',
+      image: 'https://www.loremfaces.net/96/id/3.jpg',
       bio: 'Michael leads our tech team, creating innovative solutions that make applying for loans simple and secure.'
     }
   ];
@@ -72,7 +72,7 @@ const About = () => {
             </svg>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-indigo-800 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
-            About PayDay Loans
+            About CashZen USA
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
             We're committed to providing fast, fair, and transparent loan services to help you achieve your financial goals.

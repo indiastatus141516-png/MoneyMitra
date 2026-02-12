@@ -161,7 +161,7 @@ const Contact = () => {
                   </svg>
                   <div>
                     <p className="font-semibold text-gray-900">Address</p>
-                    <p className="text-gray-600">123 Finance Street<br />Business District<br />New York, NY 10001</p>
+                    <p className="text-gray-600">85 Broad St<br />New York City, NY 10004</p>
                   </div>
                 </div>
 
@@ -187,9 +187,18 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-              <p className="text-gray-500 font-semibold">Interactive Map Coming Soon</p>
+            {/* Office Map */}
+            <div className="h-64 rounded-lg overflow-hidden shadow-md">
+              <iframe
+                title="CashZen USA Office Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.6292929292217!2d-74.01365702408252!3d40.70416133809571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a141703be89%3A0x74c637bf3f5d8f7d!2s85%20Broad%20St%2C%20New%20York%2C%20NY%2010004%2C%20USA!5e0!3m2!1sen!2sin!4v1770903226624!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
             {/* Quick Contact */}

@@ -13,8 +13,7 @@ const Testimonials = () => {
       role: "Small Business Owner",
       rating: 5,
       text: "PayLoan helped me secure the capital I needed to expand my bakery. The process was incredibly fast and the customer service was outstanding. I got approved in under 15 minutes and had the funds in my account the same day!",
-      avatar: "SJ",
-      gradient: "from-emerald-500 to-teal-600",
+      image: "https://www.loremfaces.net/96/id/1.jpg",
       verified: true,
       location: "Austin, TX",
     },
@@ -23,8 +22,7 @@ const Testimonials = () => {
       role: "Software Developer",
       rating: 5,
       text: "When my car broke down unexpectedly, PayLoan came through with emergency funding. No credit checks, no hassle - just quick and reliable financial support when I needed it most. Highly recommend!",
-      avatar: "MC",
-      gradient: "from-blue-500 to-indigo-600",
+      image: "https://www.loremfaces.net/96/id/2.jpg",
       verified: true,
       location: "San Francisco, CA",
     },
@@ -33,8 +31,7 @@ const Testimonials = () => {
       role: "Marketing Manager",
       rating: 5,
       text: "As a young professional building my credit, PayLoan offered flexible terms and competitive rates. Their transparent process and fast approval made managing unexpected expenses so much easier.",
-      avatar: "ER",
-      gradient: "from-purple-500 to-pink-600",
+      image: "https://www.loremfaces.net/96/id/3.jpg",
       verified: true,
       location: "Miami, FL",
     },
@@ -223,12 +220,12 @@ const Testimonials = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                   >
-                    <div
-                      className={`w-16 h-16 bg-gradient-to-br ${testimonials[currentIndex].gradient} rounded-2xl flex items-center justify-center mb-4 shadow-xl relative overflow-hidden`}
-                    >
-                      <span className="text-white font-bold text-xl">
-                        {testimonials[currentIndex].avatar}
-                      </span>
+                    <div className="w-16 h-16 mb-4 shadow-xl relative overflow-hidden rounded-2xl">
+                      <img
+                        src={testimonials[currentIndex].image}
+                        alt={testimonials[currentIndex].name}
+                        className="w-full h-full object-cover"
+                      />
                       {testimonials[currentIndex].verified && (
                         <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center border-2 border-white">
                           <svg
@@ -240,8 +237,6 @@ const Testimonials = () => {
                           </svg>
                         </div>
                       )}
-                      {/* Shine Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full animate-pulse"></div>
                     </div>
 
                     <div className="text-center">

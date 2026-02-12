@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const TestimonialsPage = () => {
   const navigate = useNavigate();
@@ -10,69 +10,75 @@ const TestimonialsPage = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Jennifer Martinez',
-      role: 'Small Business Owner',
-      image: 'https://via.placeholder.com/100x100/6366f1/ffffff?text=JM',
-      quote: 'The personal loan I received helped me expand my business during a crucial time. The process was smooth, and the rates were competitive. I couldn\'t have done it without their support.',
+      name: "Jennifer Martinez",
+      role: "Small Business Owner",
+      image: "https://www.loremfaces.net/96/id/5.jpg",
+      quote:
+        "The personal loan I received helped me expand my business during a crucial time. The process was smooth, and the rates were competitive. I couldn't have done it without their support.",
       rating: 5,
-      loanType: 'Business Loan'
+      loanType: "Business Loan",
     },
     {
       id: 2,
-      name: 'Robert Chen',
-      role: 'Software Engineer',
-      image: 'https://via.placeholder.com/100x100/14b8a6/ffffff?text=RC',
-      quote: 'I needed funds for home renovations, and this company provided exactly what I needed. The approval was fast, and the customer service was exceptional throughout the process.',
+      name: "Robert Chen",
+      role: "Software Engineer",
+      image: "https://www.loremfaces.net/96/id/4.jpg",
+      quote:
+        "I needed funds for home renovations, and this company provided exactly what I needed. The approval was fast, and the customer service was exceptional throughout the process.",
       rating: 5,
-      loanType: 'Personal Loan'
+      loanType: "Personal Loan",
     },
     {
       id: 3,
-      name: 'Maria Gonzalez',
-      role: 'Teacher',
-      image: 'https://via.placeholder.com/100x100/4f46e5/ffffff?text=MG',
-      quote: 'As a teacher, I was worried about my credit score, but they worked with me and found a solution that fit my needs. The monthly payments are manageable, and I\'m grateful for their understanding approach.',
+      name: "Maria Gonzalez",
+      role: "Teacher",
+      image: "/maria.jpg",
+      quote:
+        "As a teacher, I was worried about my credit score, but they worked with me and found a solution that fit my needs. The monthly payments are manageable, and I'm grateful for their understanding approach.",
       rating: 5,
-      loanType: 'Personal Loan'
+      loanType: "Personal Loan",
     },
     {
       id: 4,
-      name: 'David Thompson',
-      role: 'Retired',
-      image: 'https://via.placeholder.com/100x100/0d9488/ffffff?text=DT',
-      quote: 'Their senior loan program was perfect for my situation. The terms were clear, and the staff took the time to explain everything. I felt respected and valued as a customer.',
+      name: "David Thompson",
+      role: "Retired",
+      image: "/david.jpg",
+      quote:
+        "Their senior loan program was perfect for my situation. The terms were clear, and the staff took the time to explain everything. I felt respected and valued as a customer.",
       rating: 5,
-      loanType: 'Senior Loan'
+      loanType: "Senior Loan",
     },
     {
       id: 5,
-      name: 'Sarah Johnson',
-      role: 'Student',
-      image: 'https://via.placeholder.com/100x100/6366f1/ffffff?text=SJ',
-      quote: 'The student loan options helped me focus on my studies without financial stress. The deferred payment plan was exactly what I needed during my education.',
+      name: "Sarah Johnson",
+      role: "Student",
+      image: "/Sarah.jpg",
+      quote:
+        "The student loan options helped me focus on my studies without financial stress. The deferred payment plan was exactly what I needed during my education.",
       rating: 5,
-      loanType: 'Student Loan'
+      loanType: "Student Loan",
     },
     {
       id: 6,
-      name: 'Michael Brown',
-      role: 'Construction Worker',
-      image: 'https://via.placeholder.com/100x100/14b8a6/ffffff?text=MB',
-      quote: 'When I lost my job, their unemployed loan program gave me breathing room. The grace period and flexible terms helped me get back on my feet. Highly recommend!',
+      name: "Michael Brown",
+      role: "Construction Worker",
+      image: "/michel.jpg",
+      quote:
+        "When I lost my job, their unemployed loan program gave me breathing room. The grace period and flexible terms helped me get back on my feet. Highly recommend!",
       rating: 5,
-      loanType: 'Unemployed Loan'
-    }
+      loanType: "Unemployed Loan",
+    },
   ];
 
   const nextTestimonial = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const prevTestimonial = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1,
     );
   };
 
@@ -84,7 +90,7 @@ const TestimonialsPage = () => {
     return Array.from({ length: 5 }, (_, i) => (
       <svg
         key={i}
-        className={`w-5 h-5 ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+        className={`w-5 h-5 ${i < rating ? "text-yellow-400" : "text-gray-300"}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -128,7 +134,9 @@ const TestimonialsPage = () => {
                 <h3 className="text-lg font-poppins font-bold text-indigo-900">
                   {testimonials[activeIndex].name}
                 </h3>
-                <p className="text-gray-600">{testimonials[activeIndex].role}</p>
+                <p className="text-gray-600">
+                  {testimonials[activeIndex].role}
+                </p>
                 <span className="inline-block bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium mt-2">
                   {testimonials[activeIndex].loanType}
                 </span>
@@ -140,16 +148,36 @@ const TestimonialsPage = () => {
               onClick={prevTestimonial}
               className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </button>
             <button
               onClick={nextTestimonial}
               className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
           </div>
@@ -161,7 +189,7 @@ const TestimonialsPage = () => {
                 key={index}
                 onClick={() => goToTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === activeIndex ? 'bg-indigo-600' : 'bg-gray-300'
+                  index === activeIndex ? "bg-indigo-600" : "bg-gray-300"
                 }`}
               />
             ))}
@@ -183,14 +211,14 @@ const TestimonialsPage = () => {
                   className="w-12 h-12 rounded-full mr-4 object-cover"
                 />
                 <div>
-                  <h4 className="font-poppins font-bold text-indigo-900">{testimonial.name}</h4>
+                  <h4 className="font-poppins font-bold text-indigo-900">
+                    {testimonial.name}
+                  </h4>
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
 
-              <div className="flex mb-3">
-                {renderStars(testimonial.rating)}
-              </div>
+              <div className="flex mb-3">{renderStars(testimonial.rating)}</div>
 
               <p className="font-inter text-gray-700 mb-4 line-clamp-4">
                 "{testimonial.quote}"
@@ -209,10 +237,14 @@ const TestimonialsPage = () => {
             Ready to Join Our Satisfied Customers?
           </h2>
           <p className="text-lg mb-6 max-w-2xl mx-auto">
-            Experience the same excellent service and support that thousands of customers have enjoyed.
+            Experience the same excellent service and support that thousands of
+            customers have enjoyed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => navigate('/apply-now')} className="px-6 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+            <button
+              onClick={() => navigate("/apply-now")}
+              className="px-6 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+            >
               Apply Now
             </button>
             <button className="px-6 py-3 border border-white text-white rounded-lg hover:bg-indigo-700 transition-colors font-semibold">

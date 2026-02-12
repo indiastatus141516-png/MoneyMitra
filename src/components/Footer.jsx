@@ -62,7 +62,7 @@ const Footer = () => {
                     Street Address
                   </h4>
                   <p className="text-gray-400 text-sm">
-                    Brooklyn, NY 10036,<br />United States
+                    85 Broad St,<br />New York City, NY 10004
                   </p>
                 </div>
 
@@ -74,7 +74,7 @@ const Footer = () => {
                     Postal Address
                   </h4>
                   <p className="text-gray-400 text-sm">
-                    PO Box 16122 Collins Street<br />Victoria 8007 Australia
+                    85 Broad St,<br />New York City, NY 10004
                   </p>
                 </div>
               </div>
@@ -82,13 +82,20 @@ const Footer = () => {
 
             {/* Center Text */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
+              <div className="flex justify-center mb-4">
+                <img
+                  src="/CashzenUsa.jpeg"
+                  alt="CashZen USA logo"
+                  className="h-20 w-20 rounded-full object-cover border border-white/20 shadow-lg"
+                />
+              </div>
               <div className="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4">
-                PayDay Loans
+                CashZen USA
               </div>
               <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto mb-6"></div>
 
               <p className="text-gray-300 bg-indigo-500/20 p-4 rounded-xl border border-indigo-500/20">
-                You need an active UK bank account to allow the money to be transferred to you.
+                Your trusted path to financial peace in the United States.
               </p>
             </div>
 
@@ -155,7 +162,7 @@ const Footer = () => {
 
           {/* Center Text */}
           <p className="text-gray-400 text-sm mb-2">
-            © 2025 PayDay Loans. All Rights Reserved.
+            © 2025 CashZen USA. All Rights Reserved.
           </p>
 
           <div className="flex justify-center space-x-4 text-xs text-gray-500">
